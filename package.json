@@ -4,15 +4,16 @@
   "description": "React Setup With TypeScript without cra",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --mode development --open --hot",
-    "build": "webpack --mode production",
-    "prestart": "npm build",
-    "start": "webpack --mode development"
+    "dev": "webpack-dev-server --config config/webpack.dev.js",
+    "prod": "webpack-dev-server --config config/webpack.prod.js",
+    "build:dev": "webpack --config config/webpack.dev.js",
+    "build:prod": "webpack --config config/webpack.prod.js"
   },
   "author": "dmchoi",
   "license": "MIT",
   "dependencies": {
     "@babel/runtime-corejs3": "^7.18.3",
+    "autoprefixer": "10.4.5",
     "core-js": "^3.23.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
